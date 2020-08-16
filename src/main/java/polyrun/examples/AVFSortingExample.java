@@ -15,7 +15,7 @@ public class AVFSortingExample {
 
     public static void main(String[] args) throws Exception {
         // The example considers consistency preferential construct CAE_1 defined in Section 3.1
-        // in the paper https://doi.org/10.1016/j.omega.2016.03.003.
+        // in the paper https://doi.org/10.1016/j.ejor.2016.10.019.
         //
         // This data set consists of 48 reference alternatives with known class assignment and 5 alternatives that
         // should be examined (assigned).
@@ -272,10 +272,10 @@ public class AVFSortingExample {
         // Initialize polytope runner
         PolytopeRunner runner = new PolytopeRunner(new ConstraintsSystem(constraints));
 
-        // Setup Chebyshev center as start point
+        // Setup Chebyshev center as a start point
         runner.setAnyStartPoint();
 
-        // Generate 1000 samples and calculate
+        // Generate 100 samples and calculate
         final int numberOfSamples = 100;
         runner.chain(
                 new HitAndRun(new Random(1)), // seed is set for reproducible results
